@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bqj3looulvrou"]
+
+[ext_resource type="Texture2D" uid="uid://bj1ypc0lc3h0o" path="res://icon.svg" id="1_rwgxs"]
+[ext_resource type="PackedScene" uid="uid://cimyc1lwkd4fn" path="res://scenes/player.tscn" id="2_4wyf3"]
+
+[node name="World" type="Node2D" unique_id=755847064]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=996363123]
+offset_left = -2500.0
+offset_top = -2500.0
+offset_right = 2500.0
+offset_bottom = 2500.0
+texture = ExtResource("1_rwgxs")
+stretch_mode = 1
+
+[node name="Player" parent="." unique_id=1133496146 instance=ExtResource("2_4wyf3")]
