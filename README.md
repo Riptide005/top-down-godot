@@ -10,4 +10,4 @@ The long-term goal is to use what I learn here to build my own original dream ga
 
 ## Current Development Status
 
-![Current gameplay progress](recordings/top-down-godot.gif)
+<img src="recordings/top-down-godot.gif" alt="Current gameplay progress" />
