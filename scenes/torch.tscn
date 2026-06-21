@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://nkpluqpxmoqq"]
+
+[ext_resource type="Texture2D" uid="uid://cpy7vv43sr421" path="res://assets/torch.png" id="1_d4v33"]
+
+[node name="Torch" type="Sprite2D" unique_id=1825940812]
+texture = ExtResource("1_d4v33")
+scale = Vector2(3, 3)
