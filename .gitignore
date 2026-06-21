@@ -1,0 +1,28 @@
+# Godot 4+ specific ignores
+.godot/
+.mono/
+/android/
+
+# Editor and build junk
+.vscode/
+.vscode-test/
+*.translation
+*.log
+*.tmp
+
+# Exported builds and packaged output
+export/
+bin/
+obj/
+*.csproj
+*.sln
+*.user
+*.exe
+*.dll
+*.pck
+*.zip
+*.apk
+*.aab
+*.ipa
+*.app
+*.dSYM/
