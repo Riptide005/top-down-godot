@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bqj3looulvrou"]
 
-[ext_resource type="Texture2D" uid="uid://bj1ypc0lc3h0o" path="res://icon.svg" id="1_rwgxs"]
+[ext_resource type="Texture2D" uid="uid://dm5j2cocnn784" path="res://assets/floor_base.png" id="1_rwgxs"]
 [ext_resource type="PackedScene" uid="uid://cimyc1lwkd4fn" path="res://scenes/player.tscn" id="2_4wyf3"]
 
 [node name="World" type="Node2D" unique_id=755847064]
