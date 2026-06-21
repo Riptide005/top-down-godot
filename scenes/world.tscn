@@ -20,3 +20,6 @@ stretch_mode = 1
 position = Vector2(-328, -3)
 
 [node name="Player" parent="." unique_id=1133496146 instance=ExtResource("2_4wyf3")]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=22753152]
+color = Color(0.26666668, 0.26666668, 0.26666668, 1)
