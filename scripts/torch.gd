@@ -67,6 +67,9 @@ func _spawn_torch(position: Vector2, occupied_positions: Array[Vector2]) -> void
 	var torch: Node2D = torch_scene.instantiate() as Node2D
 	torch.position = position
 	add_child(torch)
+	var player: Node = get_node_or_null("Player")
+	if player != null:
+		move_child(torch, player.get_index())
 	occupied_positions.append(position)
 
 
