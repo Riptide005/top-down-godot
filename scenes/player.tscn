@@ -4,19 +4,18 @@
 [ext_resource type="Texture2D" uid="uid://dsiq71nf86odr" path="res://assets/wizard-test.png" id="2_qhqgy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4dvvg"]
-size = Vector2(20, 21)
+size = Vector2(55, 71)
 
-[node name="Player" type="CharacterBody2D" unique_id=1133496146]
-scale = Vector2(3, 3)
-up_direction = Vector2(0, 1)
+[node name="Player" type="CharacterBody2D" unique_id=1133496146 groups=["player"]]
 script = ExtResource("1_g2els")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1169503355]
 texture_filter = 1
+scale = Vector2(3, 3)
 texture = ExtResource("2_qhqgy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1333739746]
-position = Vector2(0, 3.5)
+position = Vector2(0.5, 3.499999)
 shape = SubResource("RectangleShape2D_4dvvg")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2116367895]

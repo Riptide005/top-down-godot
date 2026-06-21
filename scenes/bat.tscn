@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://sukmpiaw7w8k"]
+
+[ext_resource type="Script" uid="uid://dn4ecsg0vtd04" path="res://scripts/bat_enemy.gd" id="1_pthfb"]
+[ext_resource type="Texture2D" uid="uid://bpwbq4v7c6e2k" path="res://assets/bat_enemy.png" id="2_phlrj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t0wpw"]
+size = Vector2(28, 16.5)
+
+[node name="BatEnemy" type="CharacterBody2D" unique_id=1999934652]
+script = ExtResource("1_pthfb")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=472518935]
+texture = ExtResource("2_phlrj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1592373307]
+position = Vector2(0, -2.25)
+shape = SubResource("RectangleShape2D_t0wpw")
