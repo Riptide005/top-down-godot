@@ -7,7 +7,7 @@
 size = Vector2(28, 16.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cnldk"]
-size = Vector2(24, 12)
+size = Vector2(29, 18)
 
 [node name="BatEnemy" type="CharacterBody2D" unique_id=1999934652]
 script = ExtResource("1_pthfb")
@@ -22,5 +22,5 @@ shape = SubResource("RectangleShape2D_t0wpw")
 [node name="Area2D" type="Area2D" parent="CollisionShape2D" unique_id=1957912219]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionShape2D/Area2D" unique_id=1951504767]
-position = Vector2(0, -0.75)
+position = Vector2(-0.5, 0.25)
 shape = SubResource("RectangleShape2D_cnldk")
