@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://bqj3looulvrou"]
 
+[ext_resource type="Script" uid="uid://cn74yhp6ejkf7" path="res://scripts/world.gd" id="1_qfnet"]
 [ext_resource type="Texture2D" uid="uid://dm5j2cocnn784" path="res://assets/floor_base.png" id="1_rwgxs"]
 [ext_resource type="PackedScene" uid="uid://cimyc1lwkd4fn" path="res://scenes/player.tscn" id="2_4wyf3"]
 [ext_resource type="PackedScene" uid="uid://nkpluqpxmoqq" path="res://scenes/torch.tscn" id="2_k0juu"]
-[ext_resource type="Script" uid="uid://dil833mcw0q6" path="res://scripts/torch.gd" id="3_torchspawner"]
 [ext_resource type="PackedScene" uid="uid://sukmpiaw7w8k" path="res://scenes/bat.tscn" id="5_71j4m"]
 [ext_resource type="PackedScene" uid="uid://bmwrnuiurfflr" path="res://scenes/fireball.tscn" id="5_qfnet"]
 
 [node name="root" type="Node2D" unique_id=755847064]
-script = ExtResource("3_torchspawner")
+script = ExtResource("1_qfnet")
 
 [node name="World" type="TextureRect" parent="." unique_id=996363123]
 offset_left = -2500.0
@@ -33,3 +33,9 @@ position = Vector2(2240, 2433)
 [node name="CanvasModulate" type="CanvasModulate" parent="World" unique_id=22753152]
 position = Vector2(2500, 2500)
 color = Color(0.26666668, 0.26666668, 0.26666668, 1)
+
+[node name="Timer" type="Timer" parent="World" unique_id=822431359]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="World/Timer" to="." method="_on_timer_timeout"]
