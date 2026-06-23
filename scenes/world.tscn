@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://nkpluqpxmoqq" path="res://scenes/torch.tscn" id="2_k0juu"]
 [ext_resource type="Script" uid="uid://dil833mcw0q6" path="res://scripts/torch.gd" id="3_torchspawner"]
 [ext_resource type="PackedScene" uid="uid://sukmpiaw7w8k" path="res://scenes/bat.tscn" id="5_71j4m"]
+[ext_resource type="PackedScene" uid="uid://bmwrnuiurfflr" path="res://scenes/fireball.tscn" id="5_qfnet"]
 
 [node name="root" type="Node2D" unique_id=755847064]
 script = ExtResource("3_torchspawner")
@@ -19,6 +20,9 @@ stretch_mode = 1
 
 [node name="Torch" parent="World" unique_id=1825940812 instance=ExtResource("2_k0juu")]
 position = Vector2(2172, 2497)
+
+[node name="Fireball" parent="World" unique_id=147386400 instance=ExtResource("5_qfnet")]
+position = Vector2(2500, 2500)
 
 [node name="Player" parent="World" unique_id=1133496146 instance=ExtResource("2_4wyf3")]
 position = Vector2(2500, 2500)
