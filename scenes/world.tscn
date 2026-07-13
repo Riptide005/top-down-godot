@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dm5j2cocnn784" path="res://assets/floor_base.png" id="1_rwgxs"]
 [ext_resource type="PackedScene" uid="uid://cimyc1lwkd4fn" path="res://scenes/player.tscn" id="2_4wyf3"]
 [ext_resource type="PackedScene" uid="uid://nkpluqpxmoqq" path="res://scenes/torch.tscn" id="2_k0juu"]
+[ext_resource type="PackedScene" uid="uid://lqalq6bgp70t" path="res://scenes/manablade.tscn" id="5_4mrxx"]
 [ext_resource type="PackedScene" uid="uid://sukmpiaw7w8k" path="res://scenes/bat.tscn" id="5_71j4m"]
 [ext_resource type="PackedScene" uid="uid://bmwrnuiurfflr" path="res://scenes/fireball.tscn" id="5_qfnet"]
 [ext_resource type="Script" uid="uid://0o5226pku3ie" path="res://scripts/heartsui.gd" id="7_i7141"]

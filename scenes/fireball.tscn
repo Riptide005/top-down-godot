@@ -6,6 +6,18 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1gl40"]
 size = Vector2(8, 8)
 
+[sub_resource type="Gradient" id="Gradient_1gl40"]
+offsets = PackedFloat32Array(0, 0.72836536)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_cb14k"]
+gradient = SubResource("Gradient_1gl40")
+width = 128
+height = 128
+use_hdr = true
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
 [node name="Fireball" type="Area2D" unique_id=278819999]
 script = ExtResource("1_1gl40")
 
@@ -16,5 +28,10 @@ texture = ExtResource("1_3s14c")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=792973616]
 scale = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_1gl40")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=196799285]
+color = Color(1, 0.5176471, 0.29803923, 1)
+energy = 2.3
+texture = SubResource("GradientTexture2D_cb14k")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

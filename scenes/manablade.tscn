@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://lqalq6bgp70t"]
+
+[ext_resource type="Script" uid="uid://b3n1xtprc4lpq" path="res://scripts/manablade.gd" id="1_8mf73"]
+[ext_resource type="Texture2D" uid="uid://blsckimh2s12m" path="res://assets/manablade.png" id="1_rjvh0"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8mf73"]
+radius = 32.0
+height = 64.0
+
+[node name="Manablade" type="Area2D" unique_id=1137283693]
+script = ExtResource("1_8mf73")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=350243021]
+texture = ExtResource("1_rjvh0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=805824407]
+shape = SubResource("CapsuleShape2D_8mf73")

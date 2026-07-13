@@ -3,12 +3,17 @@ extends CharacterBody2D
 @export var speed: float = 200.0
 
 @export var fireball_scene: PackedScene = preload("res://scenes/fireball.tscn")
+@export var mana_blade_scene: PackedScene = preload("res://scenes/manablade.tscn")
+
+var mana_blade = null
 
 func _ready() -> void:
 	add_to_group("player")
+	spawn_mana_blade()
 	var hearts_ui = get_tree().current_scene.find_child("HeartsUI", true, false)
 	if hearts_ui != null:
 		hearts_ui.update_hearts(current_lives)
+	
 		
 func _physics_process(delta: float) -> void:
 	var direction := Vector2.ZERO
@@ -31,6 +36,8 @@ func _physics_process(delta: float) -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_accept") or (event is InputEventKey and event.pressed and event.keycode == KEY_SPACE):
 		cast_fireball()
+	if event is InputEventKey and event.pressed and not event.echo and event.keycode == KEY_E:
+		activate_mana_blade()
 
 func cast_fireball() -> void:
 	var fireball_instance = fireball_scene.instantiate() as Area2D
@@ -65,3 +72,13 @@ func _on_hurtbox_body_entered(body: Node2D) -> void:
 	if body.is_in_group("enemies"):
 		take_damage(1)
 		body.queue_free()
+
+func spawn_mana_blade() -> void:
+	mana_blade = mana_blade_scene.instantiate() 
+	mana_blade.parent_player = self
+	get_tree().current_scene.add_child.call_deferred(mana_blade)
+
+func activate_mana_blade() -> void:
+	if mana_blade != null and mana_blade.has_method("activate"):
+		mana_blade.activate()
+	
