@@ -3,6 +3,15 @@
 [ext_resource type="Script" uid="uid://dn4ecsg0vtd04" path="res://scripts/bat_enemy.gd" id="1_pthfb"]
 [ext_resource type="Texture2D" uid="uid://bpwbq4v7c6e2k" path="res://assets/bat_enemy.png" id="2_phlrj"]
 
+[sub_resource type="Gradient" id="Gradient_cnldk"]
+offsets = PackedFloat32Array(0, 0.63221157)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_48wkk"]
+gradient = SubResource("Gradient_cnldk")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t0wpw"]
 size = Vector2(28, 16.5)
 
@@ -14,6 +23,12 @@ script = ExtResource("1_pthfb")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=472518935]
 texture = ExtResource("2_phlrj")
+
+[node name="PointLight2D" type="PointLight2D" parent="Sprite2D" unique_id=1487292439]
+color = Color(0.5529643, 0, 0, 1)
+energy = 3.0
+texture = SubResource("GradientTexture2D_48wkk")
+offset = Vector2(0.5, 0.5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1592373307]
 position = Vector2(0, -2.25)
