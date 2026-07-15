@@ -67,11 +67,12 @@ func _has_clearance(candidate: Vector2, occupied_positions: Array[Vector2]) -> b
 
 func _spawn_torch(position: Vector2, occupied_positions: Array[Vector2]) -> void:
 	var torch: Node2D = torch_scene.instantiate() as Node2D
-	torch.position = position
-	add_child(torch)
-	var player: Node = get_node_or_null("Player")
-	if player != null:
-		move_child(torch, player.get_index())
+	var torch_layer: Node = get_node_or_null("World/TorchLayer")
+	if torch_layer != null:
+		torch_layer.add_child(torch)
+	else:
+		add_child(torch)
+	torch.global_position = position
 	occupied_positions.append(position)
 
 
