@@ -19,6 +19,7 @@ size = Vector2(28, 16.5)
 size = Vector2(29, 18)
 
 [node name="BatEnemy" type="CharacterBody2D" unique_id=1999934652]
+scale = Vector2(1.5, 1.5)
 script = ExtResource("1_pthfb")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=472518935]
