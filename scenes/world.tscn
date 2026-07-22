@@ -1,12 +1,11 @@
 [gd_scene format=3 uid="uid://bqj3looulvrou"]
 
-[ext_resource type="Script" uid="uid://cn74yhp6ejkf7" path="res://scripts/world.gd" id="1_qfnet"]
-[ext_resource type="Texture2D" uid="uid://dm5j2cocnn784" path="res://assets/floor_base.png" id="1_rwgxs"]
+[ext_resource type="Script" uid="uid://daqvbydovg1e5" path="res://scripts/world.gd" id="1_qfnet"]
+[ext_resource type="Texture2D" uid="uid://dkpcay0cxwtbk" path="res://assets/floor_base.png" id="1_rwgxs"]
 [ext_resource type="PackedScene" uid="uid://cimyc1lwkd4fn" path="res://scenes/player.tscn" id="2_4wyf3"]
 [ext_resource type="PackedScene" uid="uid://nkpluqpxmoqq" path="res://scenes/torch.tscn" id="2_k0juu"]
 [ext_resource type="PackedScene" uid="uid://sukmpiaw7w8k" path="res://scenes/bat.tscn" id="5_71j4m"]
-[ext_resource type="PackedScene" uid="uid://bmwrnuiurfflr" path="res://scenes/fireball.tscn" id="5_qfnet"]
-[ext_resource type="Script" uid="uid://0o5226pku3ie" path="res://scripts/heartsui.gd" id="7_i7141"]
+[ext_resource type="Script" uid="uid://c23oyjdprd4qp" path="res://scripts/heartsui.gd" id="7_i7141"]
 
 [node name="root" type="Node2D" unique_id=755847064]
 script = ExtResource("1_qfnet")
@@ -21,13 +20,10 @@ stretch_mode = 1
 
 [node name="TorchLayer" type="Node2D" parent="World" unique_id=1825940812]
 
-[node name="Torch" parent="World/TorchLayer" unique_id=1825940812 instance=ExtResource("2_k0juu")]
+[node name="Torch" parent="World/TorchLayer" unique_id=773616128 instance=ExtResource("2_k0juu")]
 position = Vector2(2172, 2497)
 
 [node name="Player" parent="World" unique_id=1133496146 instance=ExtResource("2_4wyf3")]
-position = Vector2(2500, 2500)
-
-[node name="Fireball" parent="World" unique_id=147386400 instance=ExtResource("5_qfnet")]
 position = Vector2(2500, 2500)
 
 [node name="BatEnemy" parent="World" unique_id=1999934652 instance=ExtResource("5_71j4m")]
